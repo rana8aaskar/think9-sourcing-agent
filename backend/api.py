@@ -16,7 +16,7 @@ origins = [o.strip() for o in origins_str.split(",")] if origins_str != "*" else
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
