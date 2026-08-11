@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-base: #0F1620;
+  --color-bg-card: #1A2331;
+  --color-border-card: #2A3644;
+  --color-accent-mint: #46C6A0;
+  --color-accent-ice: #7FB2E8;
+  --color-accent-amber: #E0A93B;
+  --color-accent-red: #D0553F;
+  --color-text-main: #EAF0F5;
+  --color-text-muted: #93A6B8;
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base custom classes to enforce palette without relying purely on arbitary values */
+.bg-base { background-color: var(--color-bg-base); }
+.bg-card { background-color: var(--color-bg-card); }
+.border-card { border-color: var(--color-border-card); }
+.text-main { color: var(--color-text-main); }
+.text-muted { color: var(--color-text-muted); }
+
+.text-mint { color: var(--color-accent-mint); }
+.bg-mint { background-color: var(--color-accent-mint); }
+.text-ice { color: var(--color-accent-ice); }
+.text-amber { color: var(--color-accent-amber); }
+.bg-amber { background-color: var(--color-accent-amber); }
+.text-red { color: var(--color-accent-red); }
+.bg-red { background-color: var(--color-accent-red); }
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}

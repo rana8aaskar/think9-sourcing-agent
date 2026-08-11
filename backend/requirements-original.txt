@@ -1,0 +1,6 @@
+# Offline demo (python run.py) needs only these:
+pandas>=2.0
+openpyxl>=3.1
+
+# Production extractor (python run.py --live) additionally needs:
+# anthropic>=0.40
