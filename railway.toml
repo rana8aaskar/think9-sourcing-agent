@@ -7,7 +7,7 @@ builder = "NIXPACKS"
 # Delete this section if you want to keep the root requirements.txt instead.
 
 [deploy]
-startCommand = "uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
+startCommand = "uvicorn backend.api:app --host 0.0.0.0 --port $PORT"
 healthcheckPath = "/api/health"
 healthcheckTimeout = 30
 restartPolicyType = "ON_FAILURE"
