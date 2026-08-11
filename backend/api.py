@@ -31,7 +31,12 @@ def get_report(live: bool = True):
     if live and not os.environ.get("ANTHROPIC_API_KEY") and not os.environ.get("OPENAI_API_KEY"):
         live = False
         
-    return build_report(live=live)
+    try:
+        return build_report(live=live)
+    except Exception as e:
+        import traceback
+        from fastapi.responses import JSONResponse
+        return JSONResponse(status_code=500, content={"error": str(e), "traceback": traceback.format_exc()})
 
 class AnalyzeRequest(BaseModel):
     text: str
