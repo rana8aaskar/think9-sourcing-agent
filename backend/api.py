@@ -6,6 +6,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+if "OPENAI_API_KEY" in os.environ:
+    os.environ["OPENAI_API_KEY"] = os.environ["OPENAI_API_KEY"].strip()
+if "ANTHROPIC_API_KEY" in os.environ:
+    os.environ["ANTHROPIC_API_KEY"] = os.environ["ANTHROPIC_API_KEY"].strip()
+
 from service import build_report, analyze_document
 
 app = FastAPI(title="Think9 Sourcing API")
